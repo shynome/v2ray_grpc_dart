@@ -1,6 +1,6 @@
 ///
 //  Generated code. Do not modify.
-//  source: v2ray.com/core/transport/config.proto
+//  source: v2ray.com/core/transport/internet/quic/config.proto
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
@@ -8,11 +8,14 @@ import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, overr
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'internet/config.pb.dart' as $5;
+import '../../../common/protocol/headers.pb.dart' as $11;
+import '../../../common/serial/typed_message.pb.dart' as $0;
 
 class Config extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Config', package: const $pb.PackageName('v2ray.core.transport'))
-    ..pc<$5.TransportConfig>(1, 'transportSettings', $pb.PbFieldType.PM,$5.TransportConfig.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Config', package: const $pb.PackageName('v2ray.core.transport.internet.quic'))
+    ..aOS(1, 'key')
+    ..a<$11.SecurityConfig>(2, 'security', $pb.PbFieldType.OM, $11.SecurityConfig.getDefault, $11.SecurityConfig.create)
+    ..a<$0.TypedMessage>(3, 'header', $pb.PbFieldType.OM, $0.TypedMessage.getDefault, $0.TypedMessage.create)
     ..hasRequiredFields = false
   ;
 
@@ -28,6 +31,19 @@ class Config extends $pb.GeneratedMessage {
   static Config getDefault() => _defaultInstance ??= create()..freeze();
   static Config _defaultInstance;
 
-  $core.List<$5.TransportConfig> get transportSettings => $_getList(0);
+  $core.String get key => $_getS(0, '');
+  set key($core.String v) { $_setString(0, v); }
+  $core.bool hasKey() => $_has(0);
+  void clearKey() => clearField(1);
+
+  $11.SecurityConfig get security => $_getN(1);
+  set security($11.SecurityConfig v) { setField(2, v); }
+  $core.bool hasSecurity() => $_has(1);
+  void clearSecurity() => clearField(2);
+
+  $0.TypedMessage get header => $_getN(2);
+  set header($0.TypedMessage v) { setField(3, v); }
+  $core.bool hasHeader() => $_has(2);
+  void clearHeader() => clearField(3);
 }
 

@@ -9,7 +9,7 @@ import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, overr
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../common/protocol/user.pb.dart' as $7;
-import '../../common/protocol/server_spec.pb.dart' as $8;
+import '../../common/protocol/server_spec.pb.dart' as $10;
 
 import 'config.pbenum.dart';
 import '../../common/net/network.pbenum.dart' as $2;
@@ -91,7 +91,7 @@ class ServerConfig extends $pb.GeneratedMessage {
 
 class ClientConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ClientConfig', package: const $pb.PackageName('v2ray.core.proxy.shadowsocks'))
-    ..pc<$8.ServerEndpoint>(1, 'server', $pb.PbFieldType.PM,$8.ServerEndpoint.create)
+    ..pc<$10.ServerEndpoint>(1, 'server', $pb.PbFieldType.PM,$10.ServerEndpoint.create)
     ..hasRequiredFields = false
   ;
 
@@ -107,6 +107,6 @@ class ClientConfig extends $pb.GeneratedMessage {
   static ClientConfig getDefault() => _defaultInstance ??= create()..freeze();
   static ClientConfig _defaultInstance;
 
-  $core.List<$8.ServerEndpoint> get server => $_getList(0);
+  $core.List<$10.ServerEndpoint> get server => $_getList(0);
 }
 

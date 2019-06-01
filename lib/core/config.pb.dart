@@ -10,14 +10,14 @@ import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'common/serial/typed_message.pb.dart' as $0;
-import 'transport/config.pb.dart' as $10;
+import 'transport/config.pb.dart' as $6;
 
 class Config extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Config', package: const $pb.PackageName('v2ray.core'))
     ..pc<InboundHandlerConfig>(1, 'inbound', $pb.PbFieldType.PM,InboundHandlerConfig.create)
     ..pc<OutboundHandlerConfig>(2, 'outbound', $pb.PbFieldType.PM,OutboundHandlerConfig.create)
     ..pc<$0.TypedMessage>(4, 'app', $pb.PbFieldType.PM,$0.TypedMessage.create)
-    ..a<$10.Config>(5, 'transport', $pb.PbFieldType.OM, $10.Config.getDefault, $10.Config.create)
+    ..a<$6.Config>(5, 'transport', $pb.PbFieldType.OM, $6.Config.getDefault, $6.Config.create)
     ..pc<$0.TypedMessage>(6, 'extension', $pb.PbFieldType.PM,$0.TypedMessage.create)
     ..hasRequiredFields = false
   ;
@@ -41,9 +41,9 @@ class Config extends $pb.GeneratedMessage {
   $core.List<$0.TypedMessage> get app => $_getList(2);
 
   @$core.Deprecated('This field is deprecated.')
-  $10.Config get transport => $_getN(3);
+  $6.Config get transport => $_getN(3);
   @$core.Deprecated('This field is deprecated.')
-  set transport($10.Config v) { setField(5, v); }
+  set transport($6.Config v) { setField(5, v); }
   @$core.Deprecated('This field is deprecated.')
   $core.bool hasTransport() => $_has(3);
   @$core.Deprecated('This field is deprecated.')

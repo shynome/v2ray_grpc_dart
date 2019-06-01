@@ -8,13 +8,13 @@ import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, overr
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../common/protocol/headers.pb.dart' as $9;
+import '../../common/protocol/headers.pb.dart' as $11;
 
 class Account extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Account', package: const $pb.PackageName('v2ray.core.proxy.vmess'))
     ..aOS(1, 'id')
     ..a<$core.int>(2, 'alterId', $pb.PbFieldType.OU3)
-    ..a<$9.SecurityConfig>(3, 'securitySettings', $pb.PbFieldType.OM, $9.SecurityConfig.getDefault, $9.SecurityConfig.create)
+    ..a<$11.SecurityConfig>(3, 'securitySettings', $pb.PbFieldType.OM, $11.SecurityConfig.getDefault, $11.SecurityConfig.create)
     ..hasRequiredFields = false
   ;
 
@@ -40,8 +40,8 @@ class Account extends $pb.GeneratedMessage {
   $core.bool hasAlterId() => $_has(1);
   void clearAlterId() => clearField(2);
 
-  $9.SecurityConfig get securitySettings => $_getN(2);
-  set securitySettings($9.SecurityConfig v) { setField(3, v); }
+  $11.SecurityConfig get securitySettings => $_getN(2);
+  set securitySettings($11.SecurityConfig v) { setField(3, v); }
   $core.bool hasSecuritySettings() => $_has(2);
   void clearSecuritySettings() => clearField(3);
 }

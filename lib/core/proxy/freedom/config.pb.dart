@@ -8,7 +8,7 @@ import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, overr
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../common/protocol/server_spec.pb.dart' as $8;
+import '../../common/protocol/server_spec.pb.dart' as $10;
 
 import 'config.pbenum.dart';
 
@@ -16,7 +16,7 @@ export 'config.pbenum.dart';
 
 class DestinationOverride extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DestinationOverride', package: const $pb.PackageName('v2ray.core.proxy.freedom'))
-    ..a<$8.ServerEndpoint>(1, 'server', $pb.PbFieldType.OM, $8.ServerEndpoint.getDefault, $8.ServerEndpoint.create)
+    ..a<$10.ServerEndpoint>(1, 'server', $pb.PbFieldType.OM, $10.ServerEndpoint.getDefault, $10.ServerEndpoint.create)
     ..hasRequiredFields = false
   ;
 
@@ -32,8 +32,8 @@ class DestinationOverride extends $pb.GeneratedMessage {
   static DestinationOverride getDefault() => _defaultInstance ??= create()..freeze();
   static DestinationOverride _defaultInstance;
 
-  $8.ServerEndpoint get server => $_getN(0);
-  set server($8.ServerEndpoint v) { setField(1, v); }
+  $10.ServerEndpoint get server => $_getN(0);
+  set server($10.ServerEndpoint v) { setField(1, v); }
   $core.bool hasServer() => $_has(0);
   void clearServer() => clearField(1);
 }

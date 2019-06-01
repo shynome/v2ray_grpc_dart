@@ -1,6 +1,6 @@
 ///
 //  Generated code. Do not modify.
-//  source: v2ray.com/core/transport/config.proto
+//  source: v2ray.com/core/transport/internet/headers/utp/config.proto
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
@@ -8,11 +8,9 @@ import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, overr
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'internet/config.pb.dart' as $5;
-
 class Config extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Config', package: const $pb.PackageName('v2ray.core.transport'))
-    ..pc<$5.TransportConfig>(1, 'transportSettings', $pb.PbFieldType.PM,$5.TransportConfig.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Config', package: const $pb.PackageName('v2ray.core.transport.internet.headers.utp'))
+    ..a<$core.int>(1, 'version', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
@@ -28,6 +26,9 @@ class Config extends $pb.GeneratedMessage {
   static Config getDefault() => _defaultInstance ??= create()..freeze();
   static Config _defaultInstance;
 
-  $core.List<$5.TransportConfig> get transportSettings => $_getList(0);
+  $core.int get version => $_get(0, 0);
+  set version($core.int v) { $_setUnsignedInt32(0, v); }
+  $core.bool hasVersion() => $_has(0);
+  void clearVersion() => clearField(1);
 }
 

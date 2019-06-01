@@ -9,7 +9,7 @@ import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, overr
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../common/net/port.pb.dart' as $5;
+import '../../common/net/port.pb.dart' as $9;
 import '../../common/net/network.pb.dart' as $2;
 
 import 'config.pbenum.dart';
@@ -243,7 +243,7 @@ class RoutingRule extends $pb.GeneratedMessage {
     ..aOS(1, 'tag')
     ..pc<Domain>(2, 'domain', $pb.PbFieldType.PM,Domain.create)
     ..pc<CIDR>(3, 'cidr', $pb.PbFieldType.PM,CIDR.create)
-    ..a<$5.PortRange>(4, 'portRange', $pb.PbFieldType.OM, $5.PortRange.getDefault, $5.PortRange.create)
+    ..a<$9.PortRange>(4, 'portRange', $pb.PbFieldType.OM, $9.PortRange.getDefault, $9.PortRange.create)
     ..a<$2.NetworkList>(5, 'networkList', $pb.PbFieldType.OM, $2.NetworkList.getDefault, $2.NetworkList.create)
     ..pc<CIDR>(6, 'sourceCidr', $pb.PbFieldType.PM,CIDR.create)
     ..pPS(7, 'userEmail')
@@ -253,7 +253,7 @@ class RoutingRule extends $pb.GeneratedMessage {
     ..pc<GeoIP>(11, 'sourceGeoip', $pb.PbFieldType.PM,GeoIP.create)
     ..aOS(12, 'balancingTag')
     ..pc<$2.Network>(13, 'networks', $pb.PbFieldType.PE, null, $2.Network.valueOf, $2.Network.values)
-    ..a<$5.PortList>(14, 'portList', $pb.PbFieldType.OM, $5.PortList.getDefault, $5.PortList.create)
+    ..a<$9.PortList>(14, 'portList', $pb.PbFieldType.OM, $9.PortList.getDefault, $9.PortList.create)
     ..aOS(15, 'attributes')
     ..oo(0, [1, 12])
     ..hasRequiredFields = false
@@ -285,9 +285,9 @@ class RoutingRule extends $pb.GeneratedMessage {
   $core.List<CIDR> get cidr => $_getList(2);
 
   @$core.Deprecated('This field is deprecated.')
-  $5.PortRange get portRange => $_getN(3);
+  $9.PortRange get portRange => $_getN(3);
   @$core.Deprecated('This field is deprecated.')
-  set portRange($5.PortRange v) { setField(4, v); }
+  set portRange($9.PortRange v) { setField(4, v); }
   @$core.Deprecated('This field is deprecated.')
   $core.bool hasPortRange() => $_has(3);
   @$core.Deprecated('This field is deprecated.')
@@ -322,8 +322,8 @@ class RoutingRule extends $pb.GeneratedMessage {
 
   $core.List<$2.Network> get networks => $_getList(12);
 
-  $5.PortList get portList => $_getN(13);
-  set portList($5.PortList v) { setField(14, v); }
+  $9.PortList get portList => $_getN(13);
+  set portList($9.PortList v) { setField(14, v); }
   $core.bool hasPortList() => $_has(13);
   void clearPortList() => clearField(14);
 

@@ -1,6 +1,6 @@
 ///
 //  Generated code. Do not modify.
-//  source: v2ray.com/core/transport/config.proto
+//  source: v2ray.com/core/proxy/vmess/outbound/config.proto
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
@@ -8,11 +8,11 @@ import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, overr
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'internet/config.pb.dart' as $5;
+import '../../../common/protocol/server_spec.pb.dart' as $10;
 
 class Config extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Config', package: const $pb.PackageName('v2ray.core.transport'))
-    ..pc<$5.TransportConfig>(1, 'transportSettings', $pb.PbFieldType.PM,$5.TransportConfig.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Config', package: const $pb.PackageName('v2ray.core.proxy.vmess.outbound'))
+    ..pc<$10.ServerEndpoint>(1, 'receiver', $pb.PbFieldType.PM,$10.ServerEndpoint.create)
     ..hasRequiredFields = false
   ;
 
@@ -28,6 +28,6 @@ class Config extends $pb.GeneratedMessage {
   static Config getDefault() => _defaultInstance ??= create()..freeze();
   static Config _defaultInstance;
 
-  $core.List<$5.TransportConfig> get transportSettings => $_getList(0);
+  $core.List<$10.ServerEndpoint> get receiver => $_getList(0);
 }
 
